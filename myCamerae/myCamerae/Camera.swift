@@ -15,32 +15,34 @@ class Camera : NSObject{
     
     private var isRecording:Bool!
     
-    private var videoDataOutput:AVCaptureVideoDataOutput!
+    private var videoDataOutput: AVCaptureVideoDataOutput!
     
-//    private var connection:AVCaptureConnection!
+    private var audioDataOutput: AVCaptureAudioDataOutput!
     
-    private var videoWriterInput : AVAssetWriterInput!
+    //    private var connection:AVCaptureConnection!
     
-    private var audioWriterInput :AVAssetWriterInput!
+    private var videoWriterInput: AVAssetWriterInput!
     
-    private var sessionAtSourceTime :CMTime?
+    private var audioWriterInput: AVAssetWriterInput!
     
-//    init(videoWriter: AVAssetWriter, isRecording: Bool, videoDataOutput: AVCaptureVideoDataOutput, connection: AVCaptureConnection, videoWriterInput: AVAssetWriterInput, audioWriterInput: AVAssetWriterInput) {
-//        self.videoWriter = videoWriter
-//        self.isRecording = isRecording
-//        self.videoDataOutput = videoDataOutput
-//        self.connection = connection
-//        self.videoWriterInput = videoWriterInput
-//        self.audioWriterInput = audioWriterInput
-//    }
+    private var sessionAtSourceTime: CMTime?
     
-//    init(videoWriter: AVAssetWriter, isRecording: Bool, videoDataOutput: AVCaptureVideoDataOutput, connection: AVCaptureConnection, videoWriterInput: AVAssetWriterInput) {
-//        self.videoWriter = videoWriter
-//        self.isRecording = isRecording
-//        self.videoDataOutput = videoDataOutput
-//        self.connection = connection
-//        self.videoWriterInput = videoWriterInput
-//    }
+    //    init(videoWriter: AVAssetWriter, isRecording: Bool, videoDataOutput: AVCaptureVideoDataOutput, connection: AVCaptureConnection, videoWriterInput: AVAssetWriterInput, audioWriterInput: AVAssetWriterInput) {
+    //        self.videoWriter = videoWriter
+    //        self.isRecording = isRecording
+    //        self.videoDataOutput = videoDataOutput
+    //        self.connection = connection
+    //        self.videoWriterInput = videoWriterInput
+    //        self.audioWriterInput = audioWriterInput
+    //    }
+    
+    //    init(videoWriter: AVAssetWriter, isRecording: Bool, videoDataOutput: AVCaptureVideoDataOutput, connection: AVCaptureConnection, videoWriterInput: AVAssetWriterInput) {
+    //        self.videoWriter = videoWriter
+    //        self.isRecording = isRecording
+    //        self.videoDataOutput = videoDataOutput
+    //        self.connection = connection
+    //        self.videoWriterInput = videoWriterInput
+    //    }
     
     func open() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
@@ -66,16 +68,17 @@ class Camera : NSObject{
     }
     
     private func setupCaptureSession() {
+        isRecording = true
         setUpWriter()
 #if os(visionOS)
-        let captureDevice = AVCaptureDevice.systemPreferredCamera
+        guard let captureDevice = AVCaptureDevice.systemPreferredCamera else { return }
 #else
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
 #endif
         captureSession.beginConfiguration()
         do {
             // Wrap the audio device in a capture device input.
-            let input = try AVCaptureDeviceInput(device: captureDevice!)
+            let input = try AVCaptureDeviceInput(device: captureDevice)
             // If the input can be added, add it to the session.
             if captureSession.canAddInput(input) {
                 captureSession.addInput(input)
@@ -96,7 +99,7 @@ class Camera : NSObject{
             print("video data output added")
         }
         captureSession.commitConfiguration()
-//        connection = videoDataOutput.connection(with: .video)
+        //        connection = videoDataOutput.connection(with: .video)
         
         
         //        let cameraLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -143,9 +146,10 @@ class Camera : NSObject{
     //
     
     func close() {
+        isRecording = false
         videoWriterInput.markAsFinished()
         videoWriter.finishWriting { [weak self] in
-//            self?.sessionAtSourceTime = nil
+            self?.sessionAtSourceTime = nil
             print("finish writing")
         }
         captureSession.stopRunning()
@@ -214,7 +218,7 @@ class Camera : NSObject{
 extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate{
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
-//        var timestamp = CMSampleBufferGetPresentationTimeStamp(sampleBuffer).seconds
+        //        var timestamp = CMSampleBufferGetPresentationTimeStamp(sampleBuffer).seconds
         let writable = canWrite()
         
         if writable,
@@ -240,12 +244,12 @@ extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate{
             videoWriterInput.append(sampleBuffer)
             //print("video buffering")
         }
-//                else if writable,
-//                          output == audioDataOutput,
-//                          (audioWriterInput.isReadyForMoreMediaData) {
-//                    // write audio buffer
-//                    audioWriterInput?.append(sampleBuffer)
-//                    //print("audio buffering")
-//                }
+        else if writable,
+                output == audioDataOutput,
+                (audioWriterInput.isReadyForMoreMediaData) {
+            // write audio buffer
+            audioWriterInput?.append(sampleBuffer)
+            //print("audio buffering")
+        }
     }
 }

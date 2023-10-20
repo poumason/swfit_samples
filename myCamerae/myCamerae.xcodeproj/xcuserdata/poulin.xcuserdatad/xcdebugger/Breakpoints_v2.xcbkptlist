@@ -14,8 +14,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "Camera"
             landmarkType = "3">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "Camera"
             landmarkType = "3">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "setupCaptureSession()"
             landmarkType = "7">
             <Locations>
@@ -94,8 +94,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "captureOutput(_:didOutput:from:)"
             landmarkType = "7">
             <Locations>
@@ -129,53 +129,20 @@
                   endingLineNumber = "218"
                   offsetFromSymbolStart = "128">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "38CFE3D2-5E72-454C-BE10-797D423EE572"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "myCamerae/Camera.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "setUpWriter()"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "38CFE3D2-5E72-454C-BE10-797D423EE572 - 449ed1fccac06787"
+                  uuid = "595D1454-407A-438A-BB72-12D1DF66A1E7 - 7fb168a73ebdd715"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "myCamerae.Camera.setUpWriter() -&gt; ()"
+                  symbolName = "myCamerae.Camera.captureOutput(_: __C.AVCaptureOutput, didOutput: __C.CMSampleBufferRef, from: __C.AVCaptureConnection) -&gt; ()"
                   moduleName = "myCamerae"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/poulin/github/swift_samples/myCamerae/myCamerae/Camera.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "400">
-               </Location>
-               <Location
-                  uuid = "38CFE3D2-5E72-454C-BE10-797D423EE572 - 449ed1fccac06745"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "myCamerae.Camera.setUpWriter() -&gt; ()"
-                  moduleName = "myCamerae"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/poulin/github/swift_samples/myCamerae/myCamerae/Camera.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "156"
-                  endingLineNumber = "156"
-                  offsetFromSymbolStart = "256">
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "128">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -190,8 +157,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "close()"
             landmarkType = "7">
             <Locations>
@@ -225,6 +192,21 @@
                   endingLineNumber = "146"
                   offsetFromSymbolStart = "68">
                </Location>
+               <Location
+                  uuid = "722F8923-8153-4275-8AA7-8B144FF991C5 - 3f74904c80ba0ebd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "myCamerae.Camera.close() -&gt; ()"
+                  moduleName = "myCamerae"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poulin/github/swift_samples/myCamerae/myCamerae/Camera.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "80">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -238,8 +220,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "setupCaptureSession()"
             landmarkType = "7">
             <Locations>
@@ -273,6 +255,21 @@
                   endingLineNumber = "105"
                   offsetFromSymbolStart = "2360">
                </Location>
+               <Location
+                  uuid = "A405FB7A-33F0-47E9-9675-D6C311A5F2B6 - 63c6f39cc1ab8c36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "myCamerae.Camera.setupCaptureSession() -&gt; ()"
+                  moduleName = "myCamerae"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poulin/github/swift_samples/myCamerae/myCamerae/Camera.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "2344">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -286,8 +283,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
             landmarkName = "videoFileLocation()"
             landmarkType = "7">
             <Locations>
@@ -319,6 +316,21 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "198"
                   endingLineNumber = "198"
+                  offsetFromSymbolStart = "680">
+               </Location>
+               <Location
+                  uuid = "3A255159-1914-41F5-98C3-14AB0E81B9EB - b28e3c90137c5aa0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "myCamerae.Camera.videoFileLocation() -&gt; Foundation.URL"
+                  moduleName = "myCamerae"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poulin/github/swift_samples/myCamerae/myCamerae/Camera.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "202"
+                  endingLineNumber = "202"
                   offsetFromSymbolStart = "680">
                </Location>
             </Locations>
@@ -359,22 +371,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "368640F4-851E-4013-BF60-6C51EF12366E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "myCamerae/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "CB35D083-F39D-4740-8A26-70DE8216225B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -382,8 +378,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
             landmarkName = "captureOutput(_:didOutput:from:)"
             landmarkType = "7">
             <Locations>
@@ -417,6 +413,21 @@
                   endingLineNumber = "218"
                   offsetFromSymbolStart = "128">
                </Location>
+               <Location
+                  uuid = "CB35D083-F39D-4740-8A26-70DE8216225B - 7fb168a73ebdd715"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "myCamerae.Camera.captureOutput(_: __C.AVCaptureOutput, didOutput: __C.CMSampleBufferRef, from: __C.AVCaptureConnection) -&gt; ()"
+                  moduleName = "myCamerae"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poulin/github/swift_samples/myCamerae/myCamerae/Camera.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "128">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -430,8 +441,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "setupCaptureSession()"
             landmarkType = "7">
             <Locations>
@@ -465,6 +476,21 @@
                   endingLineNumber = "81"
                   offsetFromSymbolStart = "752">
                </Location>
+               <Location
+                  uuid = "19C55F9F-A5FE-48B5-992B-60995BF23AC1 - 63c6f39cc1ab8f1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "myCamerae.Camera.setupCaptureSession() -&gt; ()"
+                  moduleName = "myCamerae"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poulin/github/swift_samples/myCamerae/myCamerae/Camera.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "724">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -478,8 +504,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "setupCaptureSession()"
             landmarkType = "7">
             <Locations>
@@ -513,6 +539,21 @@
                   endingLineNumber = "95"
                   offsetFromSymbolStart = "1840">
                </Location>
+               <Location
+                  uuid = "F33D1EEF-6FE6-4D46-8518-3DA5DF1F89EC - 63c6f39cc1ab8ee0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "myCamerae.Camera.setupCaptureSession() -&gt; ()"
+                  moduleName = "myCamerae"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poulin/github/swift_samples/myCamerae/myCamerae/Camera.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "1820">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -526,8 +567,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "setUpWriter()"
             landmarkType = "7">
             <Locations>
@@ -561,6 +602,21 @@
                   endingLineNumber = "172"
                   offsetFromSymbolStart = "1716">
                </Location>
+               <Location
+                  uuid = "AB5535C3-08A0-4B87-8CEC-A769529BDE2C - 449ed1fccac065d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "myCamerae.Camera.setUpWriter() -&gt; ()"
+                  moduleName = "myCamerae"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poulin/github/swift_samples/myCamerae/myCamerae/Camera.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "1728">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -574,8 +630,8 @@
             filePath = "myCamerae/Camera.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "setUpWriter()"
             landmarkType = "7">
             <Locations>
@@ -609,7 +665,38 @@
                   endingLineNumber = "187"
                   offsetFromSymbolStart = "3704">
                </Location>
+               <Location
+                  uuid = "758C10EE-A074-4861-AD9C-706964FC4C69 - 449ed1fccac06bc6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "myCamerae.Camera.setUpWriter() -&gt; ()"
+                  moduleName = "myCamerae"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poulin/github/swift_samples/myCamerae/myCamerae/Camera.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "191"
+                  endingLineNumber = "191"
+                  offsetFromSymbolStart = "3744">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F954D22C-0302-4943-A038-2DA0A20CF7C9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "myCamerae/Camera.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "setUpWriter()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
