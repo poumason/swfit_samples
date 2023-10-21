@@ -17,7 +17,9 @@ class Camera : NSObject{
     
     private var videoDataOutput: AVCaptureVideoDataOutput!
     
+    #if !os(visionOS)
     private var audioDataOutput: AVCaptureAudioDataOutput!
+    #endif
     
     private var videoWriterInput: AVAssetWriterInput!
     
@@ -189,7 +191,12 @@ class Camera : NSObject{
     }
 }
 
-extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureAudioDataOutputSampleBufferDelegate {
+#if !os(visionOS)
+extension Camera:  AVCaptureAudioDataOutputSampleBufferDelegate {
+}
+#endif
+
+extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         let writable = canWrite()
         
@@ -206,11 +213,13 @@ extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureAudioDat
         }
         
         if output == videoDataOutput {
+#if !os(visionOS)
             connection.videoOrientation = .portrait
             if connection.isVideoMirroringSupported {
                 connection.isVideoMirrored = true
             }
-        } 
+#endif
+        }
         
 //        let formatDescription = CMSampleBufferGetFormatDescription(sampleBuffer)
         
@@ -220,12 +229,13 @@ extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureAudioDat
             videoWriterInput.append(sampleBuffer)
             print("video buffering")
         }
-       
+#if !os(visionOS)
         if output == audioDataOutput,
            (audioWriterInput.isReadyForMoreMediaData) {
             // write audio buffer
             audioWriterInput?.append(sampleBuffer)
             print("audio buffering")
         }
+#endif
     }
 }

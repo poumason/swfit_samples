@@ -22,6 +22,7 @@
 		812744242AE15E6000EDB41C /* myCamerae.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myCamerae.entitlements; sourceTree = "<group>"; };
 		812744262AE15E6000EDB41C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8127442D2AE15F2500EDB41C /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		81A336912AE4202100BFFBAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		8127441D2AE15E5F00EDB41C /* myCamerae */ = {
 			isa = PBXGroup;
 			children = (
+				81A336912AE4202100BFFBAC /* Info.plist */,
 				8127441E2AE15E5F00EDB41C /* myCameraeApp.swift */,
 				812744202AE15E5F00EDB41C /* ContentView.swift */,
 				812744222AE15E6000EDB41C /* Assets.xcassets */,
@@ -100,7 +102,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					8127441A2AE15E5F00EDB41C = {
 						CreatedOnToolsVersion = 15.0;
@@ -185,6 +187,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -246,6 +249,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -273,11 +277,13 @@
 				CODE_SIGN_ENTITLEMENTS = myCamerae/myCamerae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"myCamerae/Preview Content\"";
 				DEVELOPMENT_TEAM = PM7QCL9W5B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = myCamerae/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ask user";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "ask user";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -314,11 +320,13 @@
 				CODE_SIGN_ENTITLEMENTS = myCamerae/myCamerae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"myCamerae/Preview Content\"";
 				DEVELOPMENT_TEAM = PM7QCL9W5B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = myCamerae/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ask user";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "ask user";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
