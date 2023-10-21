@@ -19,30 +19,15 @@ class Camera : NSObject{
     
     private var audioDataOutput: AVCaptureAudioDataOutput!
     
-    //    private var connection:AVCaptureConnection!
-    
     private var videoWriterInput: AVAssetWriterInput!
     
     private var audioWriterInput: AVAssetWriterInput!
     
     private var sessionAtSourceTime: CMTime?
     
-    //    init(videoWriter: AVAssetWriter, isRecording: Bool, videoDataOutput: AVCaptureVideoDataOutput, connection: AVCaptureConnection, videoWriterInput: AVAssetWriterInput, audioWriterInput: AVAssetWriterInput) {
-    //        self.videoWriter = videoWriter
-    //        self.isRecording = isRecording
-    //        self.videoDataOutput = videoDataOutput
-    //        self.connection = connection
-    //        self.videoWriterInput = videoWriterInput
-    //        self.audioWriterInput = audioWriterInput
-    //    }
+    private var uiQueue: DispatchQueue = DispatchQueue(label: "poulin.myCamerae")
     
-    //    init(videoWriter: AVAssetWriter, isRecording: Bool, videoDataOutput: AVCaptureVideoDataOutput, connection: AVCaptureConnection, videoWriterInput: AVAssetWriterInput) {
-    //        self.videoWriter = videoWriter
-    //        self.isRecording = isRecording
-    //        self.videoDataOutput = videoDataOutput
-    //        self.connection = connection
-    //        self.videoWriterInput = videoWriterInput
-    //    }
+    var outputFileLocation: URL!
     
     func open() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
@@ -67,15 +52,12 @@ class Camera : NSObject{
         }
     }
     
-    private func setupCaptureSession() {
-        isRecording = true
-        setUpWriter()
+    private func enableVideo() {
 #if os(visionOS)
         guard let captureDevice = AVCaptureDevice.systemPreferredCamera else { return }
 #else
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
 #endif
-        captureSession.beginConfiguration()
         do {
             // Wrap the audio device in a capture device input.
             let input = try AVCaptureDeviceInput(device: captureDevice)
@@ -89,61 +71,53 @@ class Camera : NSObject{
             print("Failed to set input device with error: \(error)")
         }
         
-        captureSession.commitConfiguration()
-        
         videoDataOutput = AVCaptureVideoDataOutput()
-        videoDataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "poulin.myCamerae"))
-        captureSession.beginConfiguration()
+        videoDataOutput.setSampleBufferDelegate(self, queue: uiQueue)
+        
         if captureSession.canAddOutput(videoDataOutput) {
             captureSession.addOutput(videoDataOutput)
             print("video data output added")
         }
+    }
+    
+    private func enableAudio() {
+        #if !os(visionOS)
+        guard let captureDevice = AVCaptureDevice.default(for: .audio) else { return }
+        do {
+            // Wrap the audio device in a capture device input.
+            let input = try AVCaptureDeviceInput(device: captureDevice)
+            // If the input can be added, add it to the session.
+            if captureSession.canAddInput(input) {
+                captureSession.addInput(input)
+                print("audio device intput added")
+            }
+        } catch {
+            // Configuration failed. Handle error.
+            print("Failed to set input device with error: \(error)")
+        }
+        
+        audioDataOutput = AVCaptureAudioDataOutput()
+        audioDataOutput.setSampleBufferDelegate(self, queue: uiQueue)
+        
+        if captureSession.canAddOutput(audioDataOutput) {
+            captureSession.addOutput(audioDataOutput)
+            print("audio data output added")
+        }
+        #endif
+    }
+    
+    private func setupCaptureSession() {
+        isRecording = true
+        setUpWriter()
+        captureSession.beginConfiguration()
+        
+        enableVideo()
+        enableAudio()
+        
         captureSession.commitConfiguration()
-        //        connection = videoDataOutput.connection(with: .video)
-        
-        
-        //        let cameraLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        //        cameraLayer.frame = self.view.frame
         
         captureSession.startRunning()
     }
-    //    let captureSession = AVCaptureSession()
-    
-    //    func config() {
-    //
-    //        // Find the default audio device.
-    //        #if os(visionOS)
-    //        var audioDevice:AVCaptureDevice?
-    //        if AVCaptureDevice.authorizationStatus(for: .video) != AVAuthorizationStatus.authorized {
-    //            AVCaptureDevice.requestAccess(for: .video) { Bool in
-    //                if Bool == true {
-    //                    print("got access")
-    //                }else {
-    //                    print("access deind")
-    //                }
-    //            }
-    //            return
-    //        }else {
-    //            audioDevice = AVCaptureDevice.systemPreferredCamera
-    //        }
-    //        #else
-    //            guard let audioDevice = AVCaptureDevice.default(for: .video) else { return }
-    //        #endif
-    //        captureSession.beginConfiguration()
-    //        do {
-    //            // Wrap the audio device in a capture device input.
-    //            let audioInput = try AVCaptureDeviceInput(device: audioDevice!)
-    //            // If the input can be added, add it to the session.
-    //            if captureSession.canAddInput(audioInput) {
-    //                captureSession.addInput(audioInput)
-    //            }
-    //        } catch {
-    //            // Configuration failed. Handle error.
-    //        }
-    //
-    //        captureSession.commitConfiguration()
-    //    }
-    //
     
     func close() {
         isRecording = false
@@ -157,7 +131,7 @@ class Camera : NSObject{
     
     func setUpWriter() {
         do {
-            let outputFileLocation = videoFileLocation()
+            outputFileLocation = videoFileLocation()
             videoWriter = try AVAssetWriter(outputURL: outputFileLocation, fileType: AVFileType.mov)
             
             // add video input
@@ -215,14 +189,16 @@ class Camera : NSObject{
     }
 }
 
-extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate{
+extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureAudioDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        
-        //        var timestamp = CMSampleBufferGetPresentationTimeStamp(sampleBuffer).seconds
         let writable = canWrite()
         
-        if writable,
-           sessionAtSourceTime == nil {
+        if writable == false {
+            print("not avaiable to write")
+            return
+        }
+        
+        if sessionAtSourceTime == nil {
             // start writing
             sessionAtSourceTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
             videoWriter.startSession(atSourceTime: sessionAtSourceTime!)
@@ -230,26 +206,26 @@ extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate{
         }
         
         if output == videoDataOutput {
-            //            connection.videoOrientation = .portrait
-            
+            connection.videoOrientation = .portrait
             if connection.isVideoMirroringSupported {
                 connection.isVideoMirrored = true
             }
-        }
+        } 
         
-        if writable,
-           output == videoDataOutput,
+//        let formatDescription = CMSampleBufferGetFormatDescription(sampleBuffer)
+        
+        if output == videoDataOutput,
            (videoWriterInput.isReadyForMoreMediaData) {
             // write video buffer
             videoWriterInput.append(sampleBuffer)
-            //print("video buffering")
+            print("video buffering")
         }
-        else if writable,
-                output == audioDataOutput,
-                (audioWriterInput.isReadyForMoreMediaData) {
+       
+        if output == audioDataOutput,
+           (audioWriterInput.isReadyForMoreMediaData) {
             // write audio buffer
             audioWriterInput?.append(sampleBuffer)
-            //print("audio buffering")
+            print("audio buffering")
         }
     }
 }
