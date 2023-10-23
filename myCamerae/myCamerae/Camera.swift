@@ -7,6 +7,7 @@
 
 import Foundation
 import AVFoundation
+import UIKit
 
 class Camera : NSObject{
     let captureSession = AVCaptureSession()
@@ -127,6 +128,42 @@ class Camera : NSObject{
         videoWriter.finishWriting { [weak self] in
             self?.sessionAtSourceTime = nil
             print("finish writing")
+            guard let fileURL = self?.outputFileLocation else {
+                print("cant got file path in weak self.")
+                return
+            }
+            //            do {
+            //                let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            //                let newPath = documentsUrl.appendingPathComponent(fileURL.lastPathComponent)
+            //
+            //                let videoData = try Data(contentsOf: fileURL)
+            //                try videoData.write(to: newPath)
+            //            } catch let error{
+            //                print("save failed, \(error)")
+            //            }
+//            do {
+//                guard let source = UIApplication.shared.windows.last?.rootViewController else {
+//                    return
+//                }
+//                let videoData = try Data(contentsOf: fileURL)
+//                let vc = UIActivityViewController(
+//                    activityItems: [videoData],
+//                    applicationActivities: nil
+//                )
+//                DispatchSerialQueue.main.async{
+//                    vc.popoverPresentationController?.sourceView = source.view
+//                    source.present(vc, animated: true)
+//                }
+//            }
+//            catch let error {
+//                print("\(error)")
+//            }
+                        
+            guard let filePath = self?.outputFileLocation?.path else {
+                print("cant got file path in weak self.")
+                return }
+            UISaveVideoAtPathToSavedPhotosAlbum(filePath,nil,nil,nil)
+            print("save mov file into album")
         }
         captureSession.stopRunning()
     }

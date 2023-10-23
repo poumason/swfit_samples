@@ -286,6 +286,7 @@
 				INFOPLIST_FILE = myCamerae/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ask user";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "ask user";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We are accessing your photos.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -329,6 +330,7 @@
 				INFOPLIST_FILE = myCamerae/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ask user";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "ask user";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We are accessing your photos.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
