@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812B5D932AE957A80065177C /* SplitViewWithStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812B5D922AE957A80065177C /* SplitViewWithStack.swift */; };
 		817AD5832AE01FD200CF96A4 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 817AD5822AE01FD200CF96A4 /* RealityKitContent */; };
 		817AD5852AE01FD200CF96A4 /* master_detailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AD5842AE01FD200CF96A4 /* master_detailApp.swift */; };
 		817AD5872AE01FD200CF96A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AD5862AE01FD200CF96A4 /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		812B5D922AE957A80065177C /* SplitViewWithStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewWithStack.swift; sourceTree = "<group>"; };
 		817AD57D2AE01FD200CF96A4 /* master_detail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = master_detail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		817AD5812AE01FD200CF96A4 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		817AD5842AE01FD200CF96A4 /* master_detailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = master_detailApp.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				817AD5882AE01FD500CF96A4 /* Assets.xcassets */,
 				817AD58D2AE01FD500CF96A4 /* Info.plist */,
 				817AD58A2AE01FD500CF96A4 /* Preview Content */,
+				812B5D922AE957A80065177C /* SplitViewWithStack.swift */,
 			);
 			path = master_detail;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			files = (
 				817AD5942AE0243D00CF96A4 /* MenuItem.swift in Sources */,
 				817AD5872AE01FD200CF96A4 /* ContentView.swift in Sources */,
+				812B5D932AE957A80065177C /* SplitViewWithStack.swift in Sources */,
 				81B4F9352AE813D6002D4CB1 /* TwoColumnSplitView.swift in Sources */,
 				817AD5962AE0246B00CF96A4 /* CoffeeEquipmentModel.swift in Sources */,
 				817AD5852AE01FD200CF96A4 /* master_detailApp.swift in Sources */,

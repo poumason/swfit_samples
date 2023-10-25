@@ -14,6 +14,7 @@ struct master_detailApp: App {
 //            ContentView()
             // https://www.appcoda.com.tw/navigationsplitview-swiftui/
             TwoColumnSplitView()
+//            SplitViewWithStack()
         }
     }
 }
