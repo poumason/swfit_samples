@@ -15,6 +15,7 @@
 		817AD58C2AE01FD500CF96A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817AD58B2AE01FD500CF96A4 /* Preview Assets.xcassets */; };
 		817AD5942AE0243D00CF96A4 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AD5932AE0243D00CF96A4 /* MenuItem.swift */; };
 		817AD5962AE0246B00CF96A4 /* CoffeeEquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AD5952AE0246B00CF96A4 /* CoffeeEquipmentModel.swift */; };
+		817C03F32AEC7D78007D8488 /* ProgressStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C03F22AEC7D78007D8488 /* ProgressStepView.swift */; };
 		81B4F9352AE813D6002D4CB1 /* TwoColumnSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B4F9342AE813D6002D4CB1 /* TwoColumnSplitView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		817AD58D2AE01FD500CF96A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		817AD5932AE0243D00CF96A4 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		817AD5952AE0246B00CF96A4 /* CoffeeEquipmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeEquipmentModel.swift; sourceTree = "<group>"; };
+		817C03F22AEC7D78007D8488 /* ProgressStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStepView.swift; sourceTree = "<group>"; };
 		81B4F9342AE813D6002D4CB1 /* TwoColumnSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnSplitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,11 +66,11 @@
 		817AD57F2AE01FD200CF96A4 /* master_detail */ = {
 			isa = PBXGroup;
 			children = (
+				817C03F42AEC7FC1007D8488 /* Models */,
+				817C03F12AEC7BD5007D8488 /* Components */,
 				817AD5842AE01FD200CF96A4 /* master_detailApp.swift */,
 				817AD5862AE01FD200CF96A4 /* ContentView.swift */,
-				817AD5952AE0246B00CF96A4 /* CoffeeEquipmentModel.swift */,
 				81B4F9342AE813D6002D4CB1 /* TwoColumnSplitView.swift */,
-				817AD5932AE0243D00CF96A4 /* MenuItem.swift */,
 				817AD5882AE01FD500CF96A4 /* Assets.xcassets */,
 				817AD58D2AE01FD500CF96A4 /* Info.plist */,
 				817AD58A2AE01FD500CF96A4 /* Preview Content */,
@@ -91,6 +93,23 @@
 				817AD58B2AE01FD500CF96A4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		817C03F12AEC7BD5007D8488 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				817C03F22AEC7D78007D8488 /* ProgressStepView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		817C03F42AEC7FC1007D8488 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				817AD5932AE0243D00CF96A4 /* MenuItem.swift */,
+				817AD5952AE0246B00CF96A4 /* CoffeeEquipmentModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +190,7 @@
 				812B5D932AE957A80065177C /* SplitViewWithStack.swift in Sources */,
 				81B4F9352AE813D6002D4CB1 /* TwoColumnSplitView.swift in Sources */,
 				817AD5962AE0246B00CF96A4 /* CoffeeEquipmentModel.swift in Sources */,
+				817C03F32AEC7D78007D8488 /* ProgressStepView.swift in Sources */,
 				817AD5852AE01FD200CF96A4 /* master_detailApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
