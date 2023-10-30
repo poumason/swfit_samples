@@ -11,9 +11,11 @@ import SwiftUI
 struct ProgressStepView: View {
     var title: String?
     @State var steps: [MenuItemView]
+//    @Binding var path: [MenuItem]
     
     init(steps: [MenuItemView], title: String? = nil) {
         self.steps = steps
+//        self.path = path
         self.title = title
     }
     
@@ -49,7 +51,8 @@ struct ProgressStepView: View {
 #Preview{
     ProgressStepView(steps: [
         MenuItemView(item: MenuItem(name: "step1", image: "gobe")),
-        MenuItemView(item: MenuItem(name: "step2", image: "gobe"))])
+        MenuItemView(item: MenuItem(name: "step2", image: "gobe"))]
+    )
 }
 
 

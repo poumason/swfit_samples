@@ -12,6 +12,7 @@ struct TwoColumnSplitView: View {
     @State private var selectedItem:MenuItem?
     @State private var columnVisiblity = NavigationSplitViewVisibility.all
     @State private var pathStack: [MenuItem] = []
+    @Environment(MenuItemViewStack.self) private var viewStack
     
     private var dataModel = CoffeeEquipmenModel()
     private let parks = [
@@ -19,6 +20,7 @@ struct TwoColumnSplitView: View {
     ]
     
     var body: some View {
+        @Bindable var _viewStack = viewStack
         NavigationSplitView(columnVisibility: $columnVisiblity) {
             List(dataModel.mainMenuItems, selection: $selectedCategoryId) { item in
                 HStack {
@@ -35,7 +37,8 @@ struct TwoColumnSplitView: View {
         }
         detail : {
             if let selectedCategoryId,
-               let categoryItems = dataModel.subMenuItems(for: selectedCategoryId){
+               let categoryItems = dataModel.subMenuItems(for: selectedCategoryId),
+               let isView = _viewStack.feedMenuItems(items: categoryItems) {
                 //                List(categoryItems, selection:$selectedItem) { item in
                 //                    NavigationLink(value: item) {
                 //                        HStack {
@@ -53,9 +56,11 @@ struct TwoColumnSplitView: View {
                 //                .navigationBarTitleDisplayMode(.inline)
                 //                SplitViewWithStack()
                 
+                 
+                
                 NavigationStack(path: $pathStack) {
                     MenuItemDetail(item: categoryItems[0], next: categoryItems[1])
-                        
+                    
                         .navigationDestination(for: MenuItem.self) { _item in
                             let _index = categoryItems.firstIndex(of: _item) ?? 0
                             if _index == 0 {
@@ -85,36 +90,12 @@ struct TwoColumnSplitView: View {
         //                .resizable()
         //                .scaledToFit()
         //            //            SplitViewWithStack()
-        //            
+        //
         //        }else {
         //            Text("Please select an item")
         //        }
         //    }
         .navigationSplitViewStyle(.balanced)
-    }
-}
-
-struct MenuItemDetail: View {
-    var item: MenuItem
-    var next: MenuItem?
-    var previous: MenuItem?
-    
-    var body: some View {
-        VStack {
-//            Text("\(item.id)")
-            Text("\(item.name)")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-            HStack{
-                if let _previous = previous {
-                    NavigationLink("Go \(_previous.name)", value: _previous)
-                }
-                Spacer()
-                if let _next = next {
-                    NavigationLink("Go \(_next.name)", value: _next)
-                }
-            }
-        }
-        .navigationTitle(item.name)
     }
 }
 

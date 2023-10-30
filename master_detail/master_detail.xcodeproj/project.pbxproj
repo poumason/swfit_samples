@@ -16,6 +16,7 @@
 		817AD5942AE0243D00CF96A4 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AD5932AE0243D00CF96A4 /* MenuItem.swift */; };
 		817AD5962AE0246B00CF96A4 /* CoffeeEquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AD5952AE0246B00CF96A4 /* CoffeeEquipmentModel.swift */; };
 		817C03F32AEC7D78007D8488 /* ProgressStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C03F22AEC7D78007D8488 /* ProgressStepView.swift */; };
+		817C03F62AF00196007D8488 /* MenuItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C03F52AF00196007D8488 /* MenuItemDetail.swift */; };
 		81B4F9352AE813D6002D4CB1 /* TwoColumnSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B4F9342AE813D6002D4CB1 /* TwoColumnSplitView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		817AD5932AE0243D00CF96A4 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		817AD5952AE0246B00CF96A4 /* CoffeeEquipmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeEquipmentModel.swift; sourceTree = "<group>"; };
 		817C03F22AEC7D78007D8488 /* ProgressStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStepView.swift; sourceTree = "<group>"; };
+		817C03F52AF00196007D8488 /* MenuItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.swift; sourceTree = "<group>"; };
 		81B4F9342AE813D6002D4CB1 /* TwoColumnSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnSplitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				817AD58D2AE01FD500CF96A4 /* Info.plist */,
 				817AD58A2AE01FD500CF96A4 /* Preview Content */,
 				812B5D922AE957A80065177C /* SplitViewWithStack.swift */,
+				817C03F52AF00196007D8488 /* MenuItemDetail.swift */,
 			);
 			path = master_detail;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				81B4F9352AE813D6002D4CB1 /* TwoColumnSplitView.swift in Sources */,
 				817AD5962AE0246B00CF96A4 /* CoffeeEquipmentModel.swift in Sources */,
 				817C03F32AEC7D78007D8488 /* ProgressStepView.swift in Sources */,
+				817C03F62AF00196007D8488 /* MenuItemDetail.swift in Sources */,
 				817AD5852AE01FD200CF96A4 /* master_detailApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

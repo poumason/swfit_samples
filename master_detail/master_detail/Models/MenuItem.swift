@@ -34,3 +34,26 @@ class MenuItemView: Identifiable, Hashable {
         self.item = item
     }
 }
+
+@Observable
+class MenuItemViewStack {
+    var stacks: [MenuItemView] = []
+    
+    func feedMenuItems(items: [MenuItem]) -> Bool? {
+        self.stacks = .init()
+        for _item in items {
+            self.stacks.append(MenuItemView(item: _item))
+        }
+        return true
+    }
+    
+    func updateFocus(current:MenuItem.ID) {
+        for _item in self.stacks {
+            if _item.id == current {
+                _item.isFocus = true
+            } else {
+                _item.isFocus = false
+            }
+        }
+    }
+}
