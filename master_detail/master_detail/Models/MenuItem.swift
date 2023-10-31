@@ -36,8 +36,23 @@ class MenuItemView: Identifiable, Hashable {
 }
 
 @Observable
-class MenuItemViewStack {
+class MenuItemViewStack: Hashable {
+   
+    static func == (lhs: MenuItemViewStack, rhs: MenuItemViewStack) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        return hasher.combine(self.id)
+    }
+    
+    
     var stacks: [MenuItemView] = []
+    var id: UUID
+    
+    init(id: UUID) {
+        self.id = id
+    }
     
     func feedMenuItems(items: [MenuItem]) -> Bool? {
         self.stacks = .init()

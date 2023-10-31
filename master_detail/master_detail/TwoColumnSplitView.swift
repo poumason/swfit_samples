@@ -12,7 +12,9 @@ struct TwoColumnSplitView: View {
     @State private var selectedItem:MenuItem?
     @State private var columnVisiblity = NavigationSplitViewVisibility.all
     @State private var pathStack: [MenuItem] = []
-    @Environment(MenuItemViewStack.self) private var viewStack
+    //    @Environment(MenuItemViewStack.self) private var viewStack
+    
+    private var viewStacks: [MenuItemViewStack] = []
     
     private var dataModel = CoffeeEquipmenModel()
     private let parks = [
@@ -20,7 +22,7 @@ struct TwoColumnSplitView: View {
     ]
     
     var body: some View {
-        @Bindable var _viewStack = viewStack
+        //        @Bindable var _viewStack = viewStack
         NavigationSplitView(columnVisibility: $columnVisiblity) {
             List(dataModel.mainMenuItems, selection: $selectedCategoryId) { item in
                 HStack {
@@ -37,8 +39,15 @@ struct TwoColumnSplitView: View {
         }
         detail : {
             if let selectedCategoryId,
-               let categoryItems = dataModel.subMenuItems(for: selectedCategoryId),
-               let isView = _viewStack.feedMenuItems(items: categoryItems) {
+               let categoryItems = dataModel.subMenuItems(for: selectedCategoryId)
+            //               let isView = _viewStack.feedMenuItems(items: categoryItems)
+            {
+                
+                //                let _viewStack = viewStacks.first(where: { $0.id == selectedCategoryId }) ?? MenuItemViewStack(id: selectedCategoryId).feedMenuItems(items: categoryItems)
+                let _viewStack = viewStacks.first(where: {
+                    $0.id == selectedCategoryId
+                }) ?? MenuItemViewStack(id: selectedCategoryId)
+                let _ = _viewStack.feedMenuItems(items: categoryItems)
                 //                List(categoryItems, selection:$selectedItem) { item in
                 //                    NavigationLink(value: item) {
                 //                        HStack {
@@ -56,30 +65,30 @@ struct TwoColumnSplitView: View {
                 //                .navigationBarTitleDisplayMode(.inline)
                 //                SplitViewWithStack()
                 
-                 
                 
                 NavigationStack(path: $pathStack) {
-                    MenuItemDetail(item: categoryItems[0], next: categoryItems[1])
-                    
+                    MenuItemDetail(item: categoryItems[0], next: categoryItems[1], _stack: _viewStack, path: $pathStack)                    
                         .navigationDestination(for: MenuItem.self) { _item in
                             let _index = categoryItems.firstIndex(of: _item) ?? 0
                             if _index == 0 {
-                                MenuItemDetail(item: _item, next: categoryItems[_index + 1])
+                                MenuItemDetail(item: _item, next: categoryItems[_index + 1],
+                                               _stack: _viewStack, path: $pathStack)
                             } else {
                                 if (_index + 1) >= categoryItems.count {
                                     
-                                    MenuItemDetail(item: _item, previous: categoryItems[_index - 1])
+                                    MenuItemDetail(item: _item, previous: categoryItems[_index - 1],
+                                                   _stack: _viewStack, path: $pathStack)
                                 } else {
                                     MenuItemDetail(item: _item,
-                                                   next: categoryItems[_index + 1], previous: categoryItems[_index - 1])
+                                                   next: categoryItems[_index + 1], previous: categoryItems[_index - 1],
+                                                   _stack: _viewStack, path: $pathStack)
                                 }
                             }
                             
                         }
-                    
-                }.onAppear() {
-                    pathStack = .init()
                 }
+                .toolbar(.hidden, for: .automatic)
+                
             } else {
                 Text("Please select a category")
             }

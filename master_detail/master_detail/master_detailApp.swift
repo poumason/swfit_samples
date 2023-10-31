@@ -9,14 +9,14 @@ import SwiftUI
 
 @main
 struct master_detailApp: App {
-    @State private var viewStack: MenuItemViewStack = MenuItemViewStack()
+//    @State private var viewStack: MenuItemViewStack = MenuItemViewStack()
     
     var body: some Scene {
         WindowGroup {
 //            ContentView()
             // https://www.appcoda.com.tw/navigationsplitview-swiftui/
             TwoColumnSplitView()
-                .environment(viewStack)
+//                .environment(viewStack)
 //            SplitViewWithStack()
         }
     }

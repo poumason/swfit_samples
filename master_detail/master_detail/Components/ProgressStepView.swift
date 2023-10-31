@@ -11,13 +11,14 @@ import SwiftUI
 struct ProgressStepView: View {
     var title: String?
     @State var steps: [MenuItemView]
-//    @Binding var path: [MenuItem]
+    @Binding var path: [MenuItem]
+    //    @Binding var path: [MenuItem]
     
-    init(steps: [MenuItemView], title: String? = nil) {
-        self.steps = steps
-//        self.path = path
-        self.title = title
-    }
+    //    init(steps: [MenuItemView], path: [MenuItem], title: String? = nil) {
+    //        self.steps = steps
+    //        self.path = path
+    //        self.title = title
+    //    }
     
     var body: some View {
         HStack(spacing: 0) {
@@ -33,9 +34,16 @@ struct ProgressStepView: View {
                             _step.isFocus = false
                         }
                     }
+                    
+                    if let itemIndex = path.firstIndex(where: { $0.id == step.id}) {
+                        path.removeLast(path.count - itemIndex - 1)
+                    } else {
+                        // 
+                    }
                 } label: {
                     Text(step.item.name)
                         .font(step.isFocus ? .title: .title3)
+                        .foregroundStyle(step.isFocus ? .yellow : .white)
                 }
                 .foregroundColor(step.isComplete ? .green: .white)
                 if step != steps.last {
@@ -48,11 +56,10 @@ struct ProgressStepView: View {
     }
 }
 
-#Preview{
-    ProgressStepView(steps: [
-        MenuItemView(item: MenuItem(name: "step1", image: "gobe")),
-        MenuItemView(item: MenuItem(name: "step2", image: "gobe"))]
-    )
-}
+//#Preview{
+//    ProgressStepView(steps: [
+//        MenuItemView(item: MenuItem(name: "step1", image: "gobe")),
+//        MenuItemView(item: MenuItem(name: "step2", image: "gobe"))]   )
+//}
 
 
