@@ -17,9 +17,6 @@ struct TwoColumnSplitView: View {
     private var viewStacks: [MenuItemViewStack] = []
     
     private var dataModel = CoffeeEquipmenModel()
-    private let parks = [
-        Park(name: "park1", next: Park(name: "park2", next: Park(name: "park3")))
-    ]
     
     var body: some View {
         //        @Bindable var _viewStack = viewStack
@@ -40,31 +37,11 @@ struct TwoColumnSplitView: View {
         detail : {
             if let selectedCategoryId,
                let categoryItems = dataModel.subMenuItems(for: selectedCategoryId)
-            //               let isView = _viewStack.feedMenuItems(items: categoryItems)
             {
-                
-                //                let _viewStack = viewStacks.first(where: { $0.id == selectedCategoryId }) ?? MenuItemViewStack(id: selectedCategoryId).feedMenuItems(items: categoryItems)
                 let _viewStack = viewStacks.first(where: {
                     $0.id == selectedCategoryId
                 }) ?? MenuItemViewStack(id: selectedCategoryId)
                 let _ = _viewStack.feedMenuItems(items: categoryItems)
-                //                List(categoryItems, selection:$selectedItem) { item in
-                //                    NavigationLink(value: item) {
-                //                        HStack {
-                //                            Image(item.image)
-                //                                .resizable()
-                //                                .scaledToFit()
-                //                                .frame(width: 50, height: 50)
-                //                            Text(item.name)
-                //                                .font(.system(.title3, design: .rounded))
-                //                                .bold()
-                //                        }
-                //                    }
-                //                }
-                //                .listStyle(.plain)
-                //                .navigationBarTitleDisplayMode(.inline)
-                //                SplitViewWithStack()
-                
                 
                 NavigationStack(path: $pathStack) {
                     MenuItemDetail(item: categoryItems[0], next: categoryItems[1], _stack: _viewStack, path: $pathStack)                    

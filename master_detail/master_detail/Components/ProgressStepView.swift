@@ -10,15 +10,8 @@ import SwiftUI
 
 struct ProgressStepView: View {
     var title: String?
-    @State var steps: [MenuItemView]
+    var steps: [MenuItemView]
     @Binding var path: [MenuItem]
-    //    @Binding var path: [MenuItem]
-    
-    //    init(steps: [MenuItemView], path: [MenuItem], title: String? = nil) {
-    //        self.steps = steps
-    //        self.path = path
-    //        self.title = title
-    //    }
     
     var body: some View {
         HStack(spacing: 0) {
@@ -38,7 +31,16 @@ struct ProgressStepView: View {
                     if let itemIndex = path.firstIndex(where: { $0.id == step.id}) {
                         path.removeLast(path.count - itemIndex - 1)
                     } else {
-                        // 
+                        // must add previous items
+                        for _step in steps {
+                            if let _ = path.first(where: {$0.id == _step.id}) {
+                                continue
+                            } else if let _ = path.first(where: {$0.id == step.id}) {
+                                break
+                            } else {
+                                path.append(_step.item)
+                            }
+                        }
                     }
                 } label: {
                     Text(step.item.name)
