@@ -14,6 +14,7 @@ struct MenuItemDetail: View {
 //    @Environment(MenuItemViewStack.self) private var stack
     var _stack: MenuItemViewStack
     @Binding var path: [MenuItem]
+    @Environment(\.openWindow) var openWindow
     
     var body: some View {
 //        @Bindable var _stack = stack
@@ -30,6 +31,11 @@ struct MenuItemDetail: View {
                     Spacer()
                     if let _next = next {
                         NavigationLink("Go \(_next.name)", value: _next)
+                    }
+                    Spacer()
+                    Button("open window") {
+//                        openWindow(value: item.id)
+                        openWindow(value: Transcation(id: item.id, path: item.name))
                     }
                 }
             }

@@ -19,5 +19,9 @@ struct master_detailApp: App {
 //                .environment(viewStack)
 //            SplitViewWithStack()
         }
+        
+        WindowGroup("inside", for: Transcation.self) { $data in
+            InsideImageView(id: UUID(), data: data!)
+        }
     }
 }
