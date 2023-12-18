@@ -7,9 +7,10 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>IntentsRestrictedWhileLocked</key>
-			<array/>
+						<array/>
 			<key>IntentsSupported</key>
 			<array>
+				<string>SearchToolIntent</string>
 				<string>INSendMessageIntent</string>
 				<string>INSearchForMessagesIntent</string>
 				<string>INSetMessageAttributeIntent</string>
