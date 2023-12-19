@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8114C3B02B316A08009335A2 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8114C3AF2B316A08009335A2 /* AppIntentVocabulary.plist */; };
+		8114C3B22B316BC6009335A2 /* SiriShortcutSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8114C3B12B316BC6009335A2 /* SiriShortcutSetupView.swift */; };
 		81FB71852B3092C50009884B /* SOPFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB71842B3092C50009884B /* SOPFinderApp.swift */; };
 		81FB71872B3092C50009884B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB71862B3092C50009884B /* ContentView.swift */; };
 		81FB71892B3092C60009884B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81FB71882B3092C60009884B /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8114C3AF2B316A08009335A2 /* AppIntentVocabulary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppIntentVocabulary.plist; sourceTree = "<group>"; };
+		8114C3B12B316BC6009335A2 /* SiriShortcutSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutSetupView.swift; sourceTree = "<group>"; };
 		81FB71812B3092C50009884B /* SOPFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FB71842B3092C50009884B /* SOPFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOPFinderApp.swift; sourceTree = "<group>"; };
 		81FB71862B3092C50009884B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		81FB71832B3092C50009884B /* SOPFinder */ = {
 			isa = PBXGroup;
 			children = (
+				8114C3AF2B316A08009335A2 /* AppIntentVocabulary.plist */,
 				81FB71952B30943F0009884B /* Info.plist */,
 				81FB71932B30941E0009884B /* SOPIntents.intentdefinition */,
 				81FB71842B3092C50009884B /* SOPFinderApp.swift */,
@@ -133,6 +138,7 @@
 				81FB71882B3092C60009884B /* Assets.xcassets */,
 				81FB718A2B3092C60009884B /* SOPFinder.entitlements */,
 				81FB718B2B3092C60009884B /* Preview Content */,
+				8114C3B12B316BC6009335A2 /* SiriShortcutSetupView.swift */,
 			);
 			path = SOPFinder;
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 			files = (
 				81FB718D2B3092C60009884B /* Preview Assets.xcassets in Resources */,
 				81FB71892B3092C60009884B /* Assets.xcassets in Resources */,
+				8114C3B02B316A08009335A2 /* AppIntentVocabulary.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81FB71872B3092C50009884B /* ContentView.swift in Sources */,
+				8114C3B22B316BC6009335A2 /* SiriShortcutSetupView.swift in Sources */,
 				81FB71942B30941E0009884B /* SOPIntents.intentdefinition in Sources */,
 				81FB71852B3092C50009884B /* SOPFinderApp.swift in Sources */,
 			);
