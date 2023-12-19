@@ -16,7 +16,8 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            Text(result.isEmpty ? "Hello World!":"from Siri result")
             Text(result)
         }
         .padding()
