@@ -6,6 +6,15 @@
 	<array>
 		<dict>
 			<key>IntentName</key>
+			<string>DisplayADCChartsIntent</string>
+			<key>IntentExamples</key>
+			<array>
+				<string>display ATC track</string>
+				<string>display ATC chats</string>
+			</array>
+		</dict>
+		<dict>
+			<key>IntentName</key>
 			<string>FindSOPIntent</string>
 			<key>IntentExamples</key>
 			<array>

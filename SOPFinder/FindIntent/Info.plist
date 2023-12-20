@@ -8,8 +8,11 @@
 		<dict>
 			<key>IntentsRestrictedWhileLocked</key>
 			<array/>
+			<key>IntentsRestrictedWhileProtectedDataUnavailable</key>
+			<array/>
 			<key>IntentsSupported</key>
 			<array>
+				<string>DisplayADCChartsIntent</string>
 				<string>FindSOPIntent</string>
 			</array>
 		</dict>

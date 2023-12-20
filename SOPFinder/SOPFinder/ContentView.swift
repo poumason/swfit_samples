@@ -11,6 +11,13 @@ import Intents
 struct ContentView: View {
     @State var result: String = ""
     @State private var isSiriShortcutPresented = false
+    @State private var intentPhase: String = "Find SOP"
+    
+    private var eqpList = [
+        "APAN01",
+        "APAN02",
+        "APAN03"
+    ]
     
     var body: some View {
         NavigationView{
@@ -28,12 +35,26 @@ struct ContentView: View {
                 Spacer()
                 Button {
                     isSiriShortcutPresented = true
+                    intentPhase = "Find SOP"
                 } label: {
                     HStack(spacing: 0) {
-                        Image("siriIcon")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                        Text("Add to Siri")
+                        Text("Add Find SOP shortcut")
+                            .font(.title2)
+                            .padding()
+                            .foregroundColor(.white)
+                    }
+                    .padding(.all, 10)
+                    .background(
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(Color.black)
+                    )
+                }
+                Button {
+                    isSiriShortcutPresented = true
+                    intentPhase = "Display ADC charts"
+                } label: {
+                    HStack(spacing: 0) {
+                        Text("Add ADC shortcut")
                             .font(.title2)
                             .padding()
                             .foregroundColor(.white)
@@ -45,11 +66,16 @@ struct ContentView: View {
                     )
                 }
                 Spacer()
+                //                    .onAppear(){
+                //                        INVocabulary.shared().setVocabulary(NSOrderedSet(array: eqpList), of: .carName)
+                //                    }
             }
             //                .navigationTitle("Siri Shortcuts")
         }
         .sheet(isPresented: $isSiriShortcutPresented) {
-            SiriShortcutSetupView(isPresented: $isSiriShortcutPresented)
+            SiriShortcutSetupView(
+                isPresented: $isSiriShortcutPresented,
+                intentPhase: $intentPhase)
         }
         .padding()
         .onContinueUserActivity("FindSOPIntent", perform: { userActivity in
@@ -59,6 +85,15 @@ struct ContentView: View {
                 let _intent: FindSOPIntent = userActivity.interaction?.intent as! FindSOPIntent
                 result = _intent.target ?? "default value"
             }
+        })
+        .onContinueUserActivity("DisplayADCChartsIntent", perform: { userActivity in
+            print("got it from app")
+            if userActivity.interaction?.intent is DisplayADCChartsIntent {
+                
+                let _intent: DisplayADCChartsIntent = userActivity.interaction?.intent as! DisplayADCChartsIntent
+                result = "\(_intent.toolId ?? "not got"), \(_intent.charttype ?? "not got")"
+            }
+
         })
     }
 }

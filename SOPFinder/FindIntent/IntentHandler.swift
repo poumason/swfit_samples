@@ -12,10 +12,13 @@ class IntentHandler: INExtension {
     override func handler(for intent: INIntent) -> Any {
         // This is the default implementation.  If you want different objects to handle different intents,
         // you can override this and return the handler you want for that particular intent.
-        if intent is FindSOPIntent {
+        
+        switch intent {
+        case is FindSOPIntent:
             return FindSOPHandler()
-        }
-        else {
+        case is DisplayADCChartsIntent:
+            return DisplayADCChartHandler()
+        default:
             fatalError("Unhandled Intent error : \(intent)")
         }
     }
@@ -26,7 +29,7 @@ class FindSOPHandler: NSObject, FindSOPIntentHandling {
     
     func handle(intent: FindSOPIntent) async -> FindSOPIntentResponse {
         if intent.target != nil {
-//            return FindSOPIntentResponse.success(result: intent.target!)
+            //            return FindSOPIntentResponse.success(result: intent.target!)
             return FindSOPIntentResponse(code: .continueInApp, userActivity: nil)
         }
         else {
@@ -42,6 +45,34 @@ class FindSOPHandler: NSObject, FindSOPIntentHandling {
         print("got target, \(target)")
         return INStringResolutionResult.success(with: target)
     }
+}
+
+
+class DisplayADCChartHandler: NSObject, DisplayADCChartsIntentHandling {
     
+    func handle(intent: DisplayADCChartsIntent) async -> DisplayADCChartsIntentResponse {
+        if intent.toolId != nil && intent.charttype != nil {
+            //            return FindSOPIntentResponse.success(result: intent.target!)
+            return DisplayADCChartsIntentResponse(code: .continueInApp, userActivity: nil)
+        }
+        else {
+            return DisplayADCChartsIntentResponse(code: .failure, userActivity: nil)
+        }
+    }
     
+    func resolveToolId(for intent: DisplayADCChartsIntent) async -> INStringResolutionResult {
+        guard let toolId = intent.toolId else {
+            return INStringResolutionResult.needsValue()
+        }
+        print("got tool id, \(toolId)")
+        return INStringResolutionResult.success(with: toolId)
+    }
+    
+    func resolveCharttype(for intent: DisplayADCChartsIntent) async -> INStringResolutionResult {
+        guard let chartType = intent.charttype else {
+            return INStringResolutionResult.needsValue()
+        }
+        print("got chart type, \(chartType)")
+        return INStringResolutionResult.success(with: chartType)
+    }
 }

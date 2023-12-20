@@ -4,6 +4,7 @@
 <dict>
 	<key>NSUserActivityTypes</key>
 	<array>
+		<string>DisplayADCChartsIntent</string>
 		<string>FindSOPIntent</string>
 	</array>
 </dict>

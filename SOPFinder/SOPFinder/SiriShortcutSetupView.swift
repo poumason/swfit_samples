@@ -15,10 +15,20 @@ struct SiriShortcutSetupView: UIViewControllerRepresentable {
     // MARK: - Variables -
     @Binding var isPresented: Bool
     
+    @Binding var intentPhase:String
+    
     // Creates the Siri Shortcut setup view controller.
     func makeUIViewController(context: Context) -> INUIAddVoiceShortcutViewController {
-        let intent = FindSOPIntent()
-        intent.suggestedInvocationPhrase = "Find SOP"
+//        let intent = FindSOPIntent()
+//        intent.suggestedInvocationPhrase = "Find SOP"
+        var intent: INIntent
+        if intentPhase == "Find SOP" {
+            intent = FindSOPIntent()
+        } else {
+            intent = DisplayADCChartsIntent()
+        }
+        intent.suggestedInvocationPhrase = intentPhase
+        
         
         let shortcut = INShortcut(intent: intent)!
         let vc = INUIAddVoiceShortcutViewController(shortcut: shortcut)
