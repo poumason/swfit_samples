@@ -18,8 +18,9 @@
 			<string>FindSOPIntent</string>
 			<key>IntentExamples</key>
 			<array>
-				<string>find SOP for replacing optical unit</string>
-				<string>find SOP for change ADC</string>
+				<string>How replacing optical unit with SOPFinder</string>
+				<string>How change ABC with SOPFinder</string>
+				<string>How to using optical unit with SOPFinder</string>
 			</array>
 		</dict>
 	</array>
