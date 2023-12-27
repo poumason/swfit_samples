@@ -23,6 +23,7 @@
 		81FB71B52B3096B60009884B /* FindIntent.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 81FB719A2B3096B60009884B /* FindIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		81FB71BD2B3097550009884B /* SOPIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 81FB71932B30941E0009884B /* SOPIntents.intentdefinition */; };
 		81FB71BE2B3097670009884B /* SOPIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 81FB71932B30941E0009884B /* SOPIntents.intentdefinition */; };
+		81FE2F0D2B39D040003FE93E /* FindSOP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FE2F0C2B39D040003FE93E /* FindSOP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		81FB71AA2B3096B60009884B /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
 		81FB71AD2B3096B60009884B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		81FB71AF2B3096B60009884B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81FE2F0C2B39D040003FE93E /* FindSOP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FindSOP.swift; path = SOPFinder/FindSOP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		81FB71782B3092C50009884B = {
 			isa = PBXGroup;
 			children = (
+				81FE2F0C2B39D040003FE93E /* FindSOP.swift */,
 				81FB71832B3092C50009884B /* SOPFinder */,
 				81FB719E2B3096B60009884B /* FindIntent */,
 				81FB71A92B3096B60009884B /* FindIntentUI */,
@@ -313,6 +316,7 @@
 				81FB71872B3092C50009884B /* ContentView.swift in Sources */,
 				8114C3B22B316BC6009335A2 /* SiriShortcutSetupView.swift in Sources */,
 				81FB71942B30941E0009884B /* SOPIntents.intentdefinition in Sources */,
+				81FE2F0D2B39D040003FE93E /* FindSOP.swift in Sources */,
 				81FB71852B3092C50009884B /* SOPFinderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
