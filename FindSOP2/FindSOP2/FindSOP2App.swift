@@ -18,6 +18,8 @@ struct FindSOP2App: App {
         self.dataModel = _dataModel
         
         AppDependencyManager.shared.add(dependency: _dataModel)
+        
+        MyShortcuts.updateAppShortcutParameters()
     }
     
     var body: some Scene {

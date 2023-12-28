@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81F09D0D2B3DB91F00AA5871 /* ChartEntityQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F09D0C2B3DB91F00AA5871 /* ChartEntityQuery.swift */; };
+		81F09D0F2B3DBBC300AA5871 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F09D0E2B3DBBC300AA5871 /* DataManager.swift */; };
 		81FE2EFC2B39C982003FE93E /* FindSOP2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FE2EFB2B39C982003FE93E /* FindSOP2App.swift */; };
 		81FE2EFE2B39C982003FE93E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FE2EFD2B39C982003FE93E /* ContentView.swift */; };
 		81FE2F002B39C983003FE93E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81FE2EFF2B39C983003FE93E /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81F09D0C2B3DB91F00AA5871 /* ChartEntityQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartEntityQuery.swift; sourceTree = "<group>"; };
+		81F09D0E2B3DBBC300AA5871 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		81FE2EF82B39C982003FE93E /* FindSOP2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindSOP2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FE2EFB2B39C982003FE93E /* FindSOP2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSOP2App.swift; sourceTree = "<group>"; };
 		81FE2EFD2B39C982003FE93E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				81FE2F122B3C68FC003FE93E /* DataModel.swift */,
 				81FE2F182B3C7392003FE93E /* ChartEntity.swift */,
+				81F09D0C2B3DB91F00AA5871 /* ChartEntityQuery.swift */,
+				81F09D0E2B3DBBC300AA5871 /* DataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,11 +188,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				81FE2F192B3C7392003FE93E /* ChartEntity.swift in Sources */,
+				81F09D0F2B3DBBC300AA5871 /* DataManager.swift in Sources */,
 				81FE2F0B2B39CB0D003FE93E /* FindSOPIntent.swift in Sources */,
 				81FE2F152B3C6F9F003FE93E /* MyShortcuts.swift in Sources */,
 				81FE2F132B3C68FC003FE93E /* DataModel.swift in Sources */,
 				81FE2F172B3C71EE003FE93E /* DisplayChartIntent.swift in Sources */,
 				81FE2EFE2B39C982003FE93E /* ContentView.swift in Sources */,
+				81F09D0D2B3DB91F00AA5871 /* ChartEntityQuery.swift in Sources */,
 				81FE2EFC2B39C982003FE93E /* FindSOP2App.swift in Sources */,
 				81FE2F1C2B3C77B7003FE93E /* ChartView.swift in Sources */,
 			);

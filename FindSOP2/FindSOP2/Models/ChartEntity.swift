@@ -8,13 +8,27 @@
 import Foundation
 import AppIntents
 
-struct WeatherData: Identifiable {
-    let id = UUID()
-    let date: Date
-    let temperature: Double
-
-    init(year: Int, month: Int, day: Int, temperature: Double) {
-        self.date = Calendar.current.date(from: .init(year: year, month: month, day: day)) ?? Date()
-        self.temperature = temperature
+struct ChartEntity: AppEntity {
+    static var defaultQuery = ChartEntityQuery()
+    
+    var id: UUID
+    
+    @Property(title: "Chart Name")
+    var name: String
+    
+    @Property(title: "Description")
+    var description: String
+    
+    static var typeDisplayRepresentation: TypeDisplayRepresentation = "Chart"
+    
+    var displayRepresentation: DisplayRepresentation {
+        DisplayRepresentation(title: "\(name)",
+                              subtitle: "\(description)")
+    }
+    
+    init(id: UUID, name: String, description: String) {
+        self.id = id
+        self.name = name
+        self.description = description
     }
 }

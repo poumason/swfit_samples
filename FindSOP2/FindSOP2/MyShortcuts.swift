@@ -17,5 +17,13 @@ struct MyShortcuts: AppShortcutsProvider {
                     ],
                     shortTitle: "Find SOP",
                     systemImageName: "shoeprints.fill")
+        
+        AppShortcut(intent: DisplayChartIntent(),
+                    phrases: [
+                        "Display Chart",
+                        "Start \(.applicationName)"
+                    ],
+                    shortTitle: "Display Chart",
+                    systemImageName: "wallet.pass")
     }
 }
