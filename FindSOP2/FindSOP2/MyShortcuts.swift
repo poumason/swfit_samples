@@ -13,7 +13,7 @@ struct MyShortcuts: AppShortcutsProvider {
         AppShortcut(intent: FindSOPIntent(),
                     phrases: [
                         "Find SOP",
-                        "Start \(.applicationName)"
+                        "Find SOP using \(.applicationName)"
                     ],
                     shortTitle: "Find SOP",
                     systemImageName: "shoeprints.fill")
@@ -21,7 +21,7 @@ struct MyShortcuts: AppShortcutsProvider {
         AppShortcut(intent: DisplayChartIntent(),
                     phrases: [
                         "Display Chart",
-                        "Start \(.applicationName)"
+                        "Show chart using \(.applicationName)"
                     ],
                     shortTitle: "Display Chart",
                     systemImageName: "wallet.pass")
