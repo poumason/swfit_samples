@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81C9F82D2B5033B700710D55 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9F82C2B5033B700710D55 /* NavigationState.swift */; };
+		81C9F82F2B50348700710D55 /* WebViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9F82E2B50348700710D55 /* WebViewUI.swift */; };
 		81E6C3212B4ED81E009AB72D /* wakeupAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6C3202B4ED81E009AB72D /* wakeupAppApp.swift */; };
 		81E6C3232B4ED81E009AB72D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6C3222B4ED81E009AB72D /* ContentView.swift */; };
 		81E6C3252B4ED81F009AB72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E6C3242B4ED81F009AB72D /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81C9F82C2B5033B700710D55 /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		81C9F82E2B50348700710D55 /* WebViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewUI.swift; sourceTree = "<group>"; };
 		81E6C31D2B4ED81E009AB72D /* wakeupApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wakeupApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E6C3202B4ED81E009AB72D /* wakeupAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wakeupAppApp.swift; sourceTree = "<group>"; };
 		81E6C3222B4ED81E009AB72D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +40,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81C9F82B2B50334700710D55 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				81C9F82C2B5033B700710D55 /* NavigationState.swift */,
+				81C9F82E2B50348700710D55 /* WebViewUI.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		81E6C3142B4ED81E009AB72D = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +68,7 @@
 		81E6C31F2B4ED81E009AB72D /* wakeupApp */ = {
 			isa = PBXGroup;
 			children = (
+				81C9F82B2B50334700710D55 /* WebView */,
 				81E6C32F2B4ED8C6009AB72D /* Info.plist */,
 				81E6C3202B4ED81E009AB72D /* wakeupAppApp.swift */,
 				81E6C3222B4ED81E009AB72D /* ContentView.swift */,
@@ -145,6 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E6C3232B4ED81E009AB72D /* ContentView.swift in Sources */,
+				81C9F82D2B5033B700710D55 /* NavigationState.swift in Sources */,
+				81C9F82F2B50348700710D55 /* WebViewUI.swift in Sources */,
 				81E6C3312B4ED9AC009AB72D /* MyWebViewUI.swift in Sources */,
 				81E6C3212B4ED81E009AB72D /* wakeupAppApp.swift in Sources */,
 			);

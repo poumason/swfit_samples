@@ -33,6 +33,15 @@ class MyWKNavigation: NSObject, WKNavigationDelegate {
     func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
         print(navigation ?? "")
     }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    }
+    
+    func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        // 強迫認證憑證
+        let cred = URLCredential(trust: challenge.protectionSpace.serverTrust!)
+        completionHandler(.useCredential, cred)
+    }
 }
 
 // https://www.avanderlee.com/swiftui/sfsafariviewcontroller-open-webpages-in-app/
