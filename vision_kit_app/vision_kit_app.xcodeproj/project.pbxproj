@@ -12,6 +12,7 @@
 		8144251C2B5EAB10008B8516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8144251B2B5EAB10008B8516 /* Assets.xcassets */; };
 		814425202B5EAB10008B8516 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8144251F2B5EAB10008B8516 /* Preview Assets.xcassets */; };
 		8144252C2B600208008B8516 /* DataScannerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8144252B2B600208008B8516 /* DataScannerRepresentable.swift */; };
+		816B3C492B64C8CE00844B22 /* DataScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816B3C482B64C8CE00844B22 /* DataScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8144251D2B5EAB10008B8516 /* vision_kit_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = vision_kit_app.entitlements; sourceTree = "<group>"; };
 		8144251F2B5EAB10008B8516 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8144252B2B600208008B8516 /* DataScannerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerRepresentable.swift; sourceTree = "<group>"; };
+		816B3C482B64C8CE00844B22 /* DataScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				8144252B2B600208008B8516 /* DataScannerRepresentable.swift */,
+				816B3C482B64C8CE00844B22 /* DataScannerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				8144252C2B600208008B8516 /* DataScannerRepresentable.swift in Sources */,
 				8144251A2B5EAB0F008B8516 /* ContentView.swift in Sources */,
 				814425182B5EAB0F008B8516 /* vision_kit_appApp.swift in Sources */,
+				816B3C492B64C8CE00844B22 /* DataScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,10 +309,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.poulin.testapp..vision-kit-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
@@ -344,10 +349,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.poulin.testapp..vision-kit-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};
