@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		813A065D2B662307002C904B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 813A065C2B662307002C904B /* README.md */; };
 		81F09D0D2B3DB91F00AA5871 /* ChartEntityQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F09D0C2B3DB91F00AA5871 /* ChartEntityQuery.swift */; };
 		81F09D0F2B3DBBC300AA5871 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F09D0E2B3DBBC300AA5871 /* DataManager.swift */; };
 		81FE2EFC2B39C982003FE93E /* FindSOP2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FE2EFB2B39C982003FE93E /* FindSOP2App.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		813A065C2B662307002C904B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		81F09D0C2B3DB91F00AA5871 /* ChartEntityQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartEntityQuery.swift; sourceTree = "<group>"; };
 		81F09D0E2B3DBBC300AA5871 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		81FE2EF82B39C982003FE93E /* FindSOP2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindSOP2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +54,7 @@
 		81FE2EEF2B39C982003FE93E = {
 			isa = PBXGroup;
 			children = (
+				813A065C2B662307002C904B /* README.md */,
 				81FE2EFA2B39C982003FE93E /* FindSOP2 */,
 				81FE2EF92B39C982003FE93E /* Products */,
 			);
@@ -175,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813A065D2B662307002C904B /* README.md in Resources */,
 				81FE2F042B39C983003FE93E /* Preview Assets.xcassets in Resources */,
 				81FE2F002B39C983003FE93E /* Assets.xcassets in Resources */,
 			);

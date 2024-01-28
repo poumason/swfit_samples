@@ -19,6 +19,7 @@
 		81137AC02B29F94600CC126B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81137ABE2B29F94600CC126B /* MainInterface.storyboard */; };
 		81137AC42B29F94600CC126B /* MessageIntentUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 81137AB82B29F94600CC126B /* MessageIntentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		81137AC72B29F94600CC126B /* MessageIntent.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 81137AAC2B29F94500CC126B /* MessageIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		813A065F2B66236B002C904B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 813A065E2B66236B002C904B /* README.md */; };
 		81FB71312B3023330009884B /* SearchToolHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB71302B3023330009884B /* SearchToolHandler.swift */; };
 		81FB71332B3023440009884B /* MsgIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB71322B3023440009884B /* MsgIntentHandler.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		81137ABC2B29F94600CC126B /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
 		81137ABF2B29F94600CC126B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		81137AC12B29F94600CC126B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		813A065E2B66236B002C904B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		81FB712F2B3022F90009884B /* ToolsIntent.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ToolsIntent.intentdefinition; sourceTree = "<group>"; };
 		81FB71302B3023330009884B /* SearchToolHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchToolHandler.swift; sourceTree = "<group>"; };
 		81FB71322B3023440009884B /* MsgIntentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgIntentHandler.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		81137A8B2B29F88D00CC126B = {
 			isa = PBXGroup;
 			children = (
+				813A065E2B66236B002C904B /* README.md */,
 				81137A962B29F88D00CC126B /* test_sirikit_app */,
 				81137AB02B29F94500CC126B /* MessageIntent */,
 				81137ABB2B29F94600CC126B /* MessageIntentUI */,
@@ -280,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813A065F2B66236B002C904B /* README.md in Resources */,
 				81137AA02B29F88E00CC126B /* Preview Assets.xcassets in Resources */,
 				81137A9C2B29F88E00CC126B /* Assets.xcassets in Resources */,
 			);

@@ -15,3 +15,7 @@ based on SwiftUI to integrated UIViewControllerRepresentable.
 ](https://danielsaidi.com/blog/2022/05/09/building-a-document-scanner-for-swiftui)
 - [利用 VisionKit 框架　在 SwiftUI 掃描圖片及辨識文字](https://www.appcoda.com.tw/swiftui-text-recognition/)
 - [SwiftUI TabView: The Easy Way](https://medium.com/@jpmtech/swiftui-tabview-the-easy-way-3e240060894b)
+- [VisionKit Framework](https://developer.apple.com/documentation/visionkit)
+- [Live Data Scanning on iOS: A Quick Look at Apple’s VisionKit Framework](https://medium.com/ciandt-techblog/live-data-scanning-on-ios-a-quick-look-at-apples-visionkit-framework-682ea50fa04b)
+- [WWDC23 - VisionKit DataScannerViewController 的一些改进](https://swiftcafe.io/post/wwdc23-visionkit-datascanner)
+- [How to create text recognition with Vision Framework in Swift](https://medium.com/@mobile_44538/how-to-create-text-recognition-with-vision-framework-in-swift-459779bf3586)
