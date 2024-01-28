@@ -17,7 +17,7 @@ struct DataScannerRepresentable: UIViewControllerRepresentable {
         let dataScanner = DataScannerViewController(
             recognizedDataTypes: [
                 .text(languages: ["en-US",
-                                  "ja_JP",
+                                  "ja-JP",
                                   "zh-TW"]),
                 .barcode(symbologies: [
                     .qr, .code93

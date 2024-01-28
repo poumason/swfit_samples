@@ -16,6 +16,10 @@ struct ContentView: View {
                     .tabItem {
                         Label("Data Scanner", systemImage: "qrcode.viewfinder")
                     }
+                DocumentScannerView()
+                    .tabItem {
+                        Label("Document Scanner", systemImage: "scanner")
+                    }
             }
         }
         .padding()

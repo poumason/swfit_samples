@@ -24,7 +24,7 @@ struct DataScannerView: View {
                         .background(Color.white)
                 }
             } else {
-                Image(systemName: "globe")
+                Image(systemName: "multiply.circle")
                     .imageScale(.large)
                     .foregroundStyle(.tint)
                 if !DataScannerViewController.isSupported {
