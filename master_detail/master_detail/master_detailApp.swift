@@ -9,11 +9,19 @@ import SwiftUI
 
 @main
 struct master_detailApp: App {
+//    @State private var viewStack: MenuItemViewStack = MenuItemViewStack()
+    
     var body: some Scene {
         WindowGroup {
 //            ContentView()
             // https://www.appcoda.com.tw/navigationsplitview-swiftui/
             TwoColumnSplitView()
+//                .environment(viewStack)
+//            SplitViewWithStack()
+        }
+        
+        WindowGroup("inside", for: Transcation.self) { $data in
+            InsideImageView(id: UUID(), data: data!)
         }
     }
 }

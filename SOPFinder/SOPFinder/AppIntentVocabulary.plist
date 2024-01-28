@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IntentPhrases</key>
+	<array>
+		<dict>
+			<key>IntentName</key>
+			<string>DisplayADCChartsIntent</string>
+			<key>IntentExamples</key>
+			<array>
+				<string>display ATC track</string>
+				<string>display ATC chats</string>
+			</array>
+		</dict>
+		<dict>
+			<key>IntentName</key>
+			<string>FindSOPIntent</string>
+			<key>IntentExamples</key>
+			<array>
+				<string>How replacing optical unit with SOPFinder</string>
+				<string>How change ABC with SOPFinder</string>
+				<string>How to using optical unit with SOPFinder</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

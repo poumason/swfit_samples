@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812B5D932AE957A80065177C /* SplitViewWithStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812B5D922AE957A80065177C /* SplitViewWithStack.swift */; };
 		817AD5832AE01FD200CF96A4 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 817AD5822AE01FD200CF96A4 /* RealityKitContent */; };
 		817AD5852AE01FD200CF96A4 /* master_detailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AD5842AE01FD200CF96A4 /* master_detailApp.swift */; };
 		817AD5872AE01FD200CF96A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AD5862AE01FD200CF96A4 /* ContentView.swift */; };
@@ -14,10 +15,15 @@
 		817AD58C2AE01FD500CF96A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817AD58B2AE01FD500CF96A4 /* Preview Assets.xcassets */; };
 		817AD5942AE0243D00CF96A4 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AD5932AE0243D00CF96A4 /* MenuItem.swift */; };
 		817AD5962AE0246B00CF96A4 /* CoffeeEquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AD5952AE0246B00CF96A4 /* CoffeeEquipmentModel.swift */; };
+		817C03F32AEC7D78007D8488 /* ProgressStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C03F22AEC7D78007D8488 /* ProgressStepView.swift */; };
+		817C03F62AF00196007D8488 /* MenuItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C03F52AF00196007D8488 /* MenuItemDetail.swift */; };
+		8186809B2AF3E72B004EE66E /* InsideImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186809A2AF3E72B004EE66E /* InsideImageView.swift */; };
+		8186809D2AF3E8E9004EE66E /* Transcation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186809C2AF3E8E9004EE66E /* Transcation.swift */; };
 		81B4F9352AE813D6002D4CB1 /* TwoColumnSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B4F9342AE813D6002D4CB1 /* TwoColumnSplitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		812B5D922AE957A80065177C /* SplitViewWithStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewWithStack.swift; sourceTree = "<group>"; };
 		817AD57D2AE01FD200CF96A4 /* master_detail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = master_detail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		817AD5812AE01FD200CF96A4 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		817AD5842AE01FD200CF96A4 /* master_detailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = master_detailApp.swift; sourceTree = "<group>"; };
@@ -27,6 +33,10 @@
 		817AD58D2AE01FD500CF96A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		817AD5932AE0243D00CF96A4 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		817AD5952AE0246B00CF96A4 /* CoffeeEquipmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeEquipmentModel.swift; sourceTree = "<group>"; };
+		817C03F22AEC7D78007D8488 /* ProgressStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStepView.swift; sourceTree = "<group>"; };
+		817C03F52AF00196007D8488 /* MenuItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.swift; sourceTree = "<group>"; };
+		8186809A2AF3E72B004EE66E /* InsideImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideImageView.swift; sourceTree = "<group>"; };
+		8186809C2AF3E8E9004EE66E /* Transcation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcation.swift; sourceTree = "<group>"; };
 		81B4F9342AE813D6002D4CB1 /* TwoColumnSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnSplitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,14 +72,16 @@
 		817AD57F2AE01FD200CF96A4 /* master_detail */ = {
 			isa = PBXGroup;
 			children = (
+				817C03F42AEC7FC1007D8488 /* Models */,
+				817C03F12AEC7BD5007D8488 /* Components */,
 				817AD5842AE01FD200CF96A4 /* master_detailApp.swift */,
 				817AD5862AE01FD200CF96A4 /* ContentView.swift */,
-				817AD5952AE0246B00CF96A4 /* CoffeeEquipmentModel.swift */,
 				81B4F9342AE813D6002D4CB1 /* TwoColumnSplitView.swift */,
-				817AD5932AE0243D00CF96A4 /* MenuItem.swift */,
 				817AD5882AE01FD500CF96A4 /* Assets.xcassets */,
 				817AD58D2AE01FD500CF96A4 /* Info.plist */,
 				817AD58A2AE01FD500CF96A4 /* Preview Content */,
+				812B5D922AE957A80065177C /* SplitViewWithStack.swift */,
+				817C03F52AF00196007D8488 /* MenuItemDetail.swift */,
 			);
 			path = master_detail;
 			sourceTree = "<group>";
@@ -88,6 +100,25 @@
 				817AD58B2AE01FD500CF96A4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		817C03F12AEC7BD5007D8488 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				817C03F22AEC7D78007D8488 /* ProgressStepView.swift */,
+				8186809A2AF3E72B004EE66E /* InsideImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		817C03F42AEC7FC1007D8488 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				817AD5932AE0243D00CF96A4 /* MenuItem.swift */,
+				817AD5952AE0246B00CF96A4 /* CoffeeEquipmentModel.swift */,
+				8186809C2AF3E8E9004EE66E /* Transcation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,9 +196,14 @@
 			files = (
 				817AD5942AE0243D00CF96A4 /* MenuItem.swift in Sources */,
 				817AD5872AE01FD200CF96A4 /* ContentView.swift in Sources */,
+				812B5D932AE957A80065177C /* SplitViewWithStack.swift in Sources */,
 				81B4F9352AE813D6002D4CB1 /* TwoColumnSplitView.swift in Sources */,
 				817AD5962AE0246B00CF96A4 /* CoffeeEquipmentModel.swift in Sources */,
+				817C03F32AEC7D78007D8488 /* ProgressStepView.swift in Sources */,
+				817C03F62AF00196007D8488 /* MenuItemDetail.swift in Sources */,
 				817AD5852AE01FD200CF96A4 /* master_detailApp.swift in Sources */,
+				8186809D2AF3E8E9004EE66E /* Transcation.swift in Sources */,
+				8186809B2AF3E72B004EE66E /* InsideImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
